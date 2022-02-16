@@ -7,6 +7,13 @@
     <title>Random Bg Color 2022</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <style>
+        :root{
+            --clr: #000
+        }
+        .dark{
+            --clr: #fff;
+        }
+
         *{
             font-family: 'Montserrat';
             padding: 0;
@@ -23,22 +30,32 @@
             width: 100%;height: 100%;
             flex-direction: column;
             display: flex;align-items: center;justify-content: center;}
-        #btn{
+        .a1{
+            overflow: hidden;
             border-radius: 40px;
+            background-color:rgb(255, 255, 255);
+        }
+        #btn{
             font-size: 1.3rem;
-            width: 250px;height: 80px;}
+            font-weight: bold;
+            width: 250px;height: 100px;}
         #color-code{
-            margin-top: 20px;
+            color: var(--clr);
+            margin: 20px;
+            padding: 10px 0;
+            text-align: center;
         }
     </style>
 </head>
 <body>
     <section id="s1">
-        <button id="btn" onclick="changeBgClr()">
-            Change <br>
-            Background Color
-        </button>
-        <h2 id="color-code">Color Code</h2>
+        <article class="a1">
+            <button id="btn" onclick="changeBgClr()">
+                Change <br>
+                Background Color
+            </button>
+            <h2 id="color-code">Color Code</h2>
+        </article>
     </section>
     <script type="text/javascript">
         const cc = document.getElementById("color-code");
