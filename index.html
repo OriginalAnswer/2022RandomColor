@@ -39,6 +39,7 @@
             font-size: 1.3rem;
             font-weight: bold;
             width: 250px;height: 100px;}
+        .a1:active{transform: scale(.93);}
         #color-code{
             color: var(--clr);
             margin: 20px;
@@ -54,7 +55,7 @@
                 Change <br>
                 Background Color
             </button>
-            <h2 id="color-code">Color Code</h2>
+            <h2 id="color-code" onclick="copy()">Color Code</h2>
         </article>
     </section>
     <script type="text/javascript">
@@ -66,6 +67,10 @@
             c += Math.random().toString(16).slice(2,8);//0123456789ABCDEF
             s1.style.backgroundColor = c;
             cc.innerText = c;
+        }
+        function copy(){
+            navigator.clipboard.writeText(cc.innerText);
+            alert( cc.innerText + " is copied!");
         }
     </script>
 </body>
