@@ -69,7 +69,8 @@
             cc.innerText = c;
         }
         function copy(){
-            navigator.clipboard.writeText(cc.innerText);
+            navigator.clipboard.writeText(cc.innerText).then(
+                function(){alert('copied!')},function(){alert('err.')});
             // alert( cc.innerText + " is copied!");
         }
     </script>
